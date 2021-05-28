@@ -25,8 +25,6 @@ public class SiteTests extends TestBase {
         Assert.assertTrue(modalDialog.isDisplayed());
         String actualTextMessage = modalDialog.GetText();
         double expectedCost = pizza.getCost() * pizzaQuantity;
-        System.out.println(expectedCost);
-        System.out.println(actualTextMessage);
         Assert.assertTrue(actualTextMessage.contains(String.valueOf(expectedCost)));
     }
 
