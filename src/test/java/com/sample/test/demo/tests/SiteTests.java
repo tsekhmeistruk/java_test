@@ -17,6 +17,7 @@ public class SiteTests extends TestBase {
         double pizzaQuantity = 1;
         pizzaOrderFormPage.SelectPizza(pizza)
                           .TypeQuantity(String.valueOf(pizzaQuantity))
+                          .TypeName("Bob")
                           .TypeEmail("myemail@mail.com")
                           .TypePhone("555-55-55")
                           .SelectCardPayment()
@@ -24,6 +25,8 @@ public class SiteTests extends TestBase {
         Assert.assertTrue(modalDialog.isDisplayed());
         String actualTextMessage = modalDialog.GetText();
         double expectedCost = pizza.getCost() * pizzaQuantity;
+        System.out.println(expectedCost);
+        System.out.println(actualTextMessage);
         Assert.assertTrue(actualTextMessage.contains(String.valueOf(expectedCost)));
     }
 

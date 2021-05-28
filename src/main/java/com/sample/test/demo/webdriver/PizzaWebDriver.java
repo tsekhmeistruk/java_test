@@ -31,7 +31,7 @@ public class PizzaWebDriver {
     public void SelectDropdown(By by, String option){
         WebElement element = WaitForDisplayed((by));
         Select dropdown = new Select(element);
-        dropdown.selectByVisibleText(option);
+        dropdown.selectByValue(option);
     }
 
     public String GetText(By by){
