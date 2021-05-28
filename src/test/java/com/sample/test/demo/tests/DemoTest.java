@@ -1,7 +1,7 @@
 package com.sample.test.demo.tests;
 
 import org.testng.annotations.Test;
-import com.sample.test.demo.TestBase;
+import com.sample.test.demo.abstracts.TestBase;
 
 public class DemoTest extends TestBase {
 
@@ -9,5 +9,4 @@ public class DemoTest extends TestBase {
     public void demoTest() {
         System.out.println("HELLO WORLD");
     }
-
 }

@@ -38,6 +38,11 @@ public class Configuration {
     public String getUrl() {
         return getProperty("url");
     }
+
+    public long getTimeout() {
+        return Long.parseLong(getProperty("timeout"));
+    }
+
     public String getProperty(String propertyName) {
         return configProperties.getProperty(propertyName);
     }
